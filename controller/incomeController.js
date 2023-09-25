@@ -1,12 +1,12 @@
-const Income = require("../model/income.model");
+const Income = require("../model/Income");
 
 const createIncome = async (req, res) => {
   const { title, amount, has_recreated, is_monthly_income } = req.body;
-  const id = "650d3a1b9869d80532618404";
+  const user_id = "650d3a1b9869d80532618404";
 
   try {
     const income = await Income.create({
-      user_id: id,
+      user_id,
       amount,
       title,
       has_recreated,

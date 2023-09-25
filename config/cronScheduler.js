@@ -1,5 +1,5 @@
 const cron = require("node-cron");
-const Income = require("../model/income.model");
+const Income = require("../model/Income");
 
 const cronScheduler = () => {
   cron.schedule("0 0 0 * * *", async () => {
@@ -25,7 +25,6 @@ const cronScheduler = () => {
         $gte: oneMonthAgo,
         $lt: dayAfterOneMonthAgo,
       },
-      has_recreated: false,
     }).exec();
 
     // for each incomes, create a new income with the same object

@@ -18,10 +18,6 @@ const incomeSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  has_recreated: {
-    type: Boolean,
-    default: false,
-  },
   created_at: {
     type: Date,
     default: new Date(),
